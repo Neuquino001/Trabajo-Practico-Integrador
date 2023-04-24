@@ -1,0 +1,15 @@
+getPersona() nos devuelve el nombre de la persona
+getEquipoLocal() nos devuelve el nombre del equipo local
+getEquipoVisitante() nos devuelve el nombre del equipo visitante
+getRonda() no devuelve la Ronda
+
+con estos objetos podemos filtar o tomar los datos que nesecitamos
+
+
+para hacer uso de esta clase primeros llamamos al metodo "leerArchivo" de la clase LeerArchivo.
+este leera el archivo, creara los objetos pronostico correspondientes y los almacenara en una lista llamada "pronosticos". luego podemos hacer uso de los objetos pronosticos por ejemplo
+
+for (Pronostico pronostico : pronosticos) {
+    int resultado = pronostico.calculoResultado();
+    System.out.println("Partido para " +   pronostico.getEquipoLocal() + " vs " + pronostico.getEquipoVisitante() + " en la ronda " + pronostico.getRonda() + " pronosticado por " + pronostico.getPersona() + ": " + resultado);
+}
